@@ -1,0 +1,575 @@
+https://ects-bilgi-edu-tr.translate.goog/Institutional?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: "BACHELOR'S"
+  DEGREE_TYPE: Bachelor
+  PROGRAM: Undergraduate
+  UNIVERSITY: 'Istanbul Bilgi University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://ects-bilgi-edu-tr.translate.goog
+  PROJECT: https://ects-bilgi-edu-tr.translate.goog/Institutional?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc
+  URL: https://ects-bilgi-edu-tr.translate.goog
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%Bachelor%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate%'
+
+  Get_course_Requirement:
+    course_code:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_code_link:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'td.tyycCell:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_name_link:
+      css: 'tr:nth-of-type(n+5) td.tyycCell:nth-of-type(2) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_elective:
+      css: 'td.tyycCell:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_hours:
+      css: 'td.tyycCell.text-center label'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'td.tyycCell:nth-of-type(5)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_each_table_total_credits:
+      css: 'td.tyycCell.text-center:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    total_credits:
+      css: 'div:nth-of-type(9)'
+      xpath: null
+      type: Text
+
+
+  Get_course_page:
+    course_description:
+      css: 'div.container div.container div:nth-of-type(3) tr:nth-of-type(5) td:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+  Pagination:
+    required: True
+
+  Collect_Pagination_numbers:
+    total_pages_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+3) a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Collect_Pagination_urls:
+    total_pages_urls_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+4) a'
+      xpath: null
+      multiple: true
+      type: Link
+
+  Click_next_button:
+    required: True
+    Xpath: /html/body/div[2]/div[3]/div[1]/div[1]/ul/li[7]
+
+  Get_course_pagination:
+    course_codes_multiple:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_codes_links:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'h1.panel-title a:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'div.panel-body > div:nth-of-type(1) label:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+https://ects-bilgi-edu-tr.translate.goog/Department?cid=39&cycleNo=0&_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: "BACHELOR'S"
+  DEGREE_TYPE: Bachelor
+  PROGRAM: Undergraduate
+  UNIVERSITY: 'Istanbul Bilgi University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://ects-bilgi-edu-tr.translate.goog
+  PROJECT: https://ects-bilgi-edu-tr.translate.goog/Institutional?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc
+  URL: https://ects-bilgi-edu-tr.translate.goog
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: "%Associate's Degree%"
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate%'
+
+  Get_course_Requirement:
+    course_code:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_code_link:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'td.tyycCell:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_name_link:
+      css: 'tr:nth-of-type(n+5) td.tyycCell:nth-of-type(2) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_elective:
+      css: 'td.tyycCell:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_hours:
+      css: 'td.tyycCell.text-center label'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'td.tyycCell:nth-of-type(5)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_each_table_total_credits:
+      css: 'td.tyycCell.text-center:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    total_credits:
+      css: 'div:nth-of-type(9)'
+      xpath: null
+      type: Text
+
+
+  Get_course_page:
+    course_description:
+      css: 'div.container div.container div:nth-of-type(3) tr:nth-of-type(5) td:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+  Pagination:
+    required: True
+
+  Collect_Pagination_numbers:
+    total_pages_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+3) a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Collect_Pagination_urls:
+    total_pages_urls_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+4) a'
+      xpath: null
+      multiple: true
+      type: Link
+
+  Click_next_button:
+    required: True
+    Xpath: /html/body/div[2]/div[3]/div[1]/div[1]/ul/li[7]
+
+  Get_course_pagination:
+    course_codes_multiple:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_codes_links:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'h1.panel-title a:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'div.panel-body > div:nth-of-type(1) label:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+
+https://ects-bilgi-edu-tr.translate.goog/Department?cid=39&cycleNo=1&_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: "BACHELOR'S"
+  DEGREE_TYPE: Bachelor
+  PROGRAM: Undergraduate
+  UNIVERSITY: 'Istanbul Bilgi University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://ects-bilgi-edu-tr.translate.goog
+  PROJECT: https://ects-bilgi-edu-tr.translate.goog/Institutional?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc
+  URL: https://ects-bilgi-edu-tr.translate.goog
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%Bachelor%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate%'
+
+  Get_course_Requirement:
+    course_code:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_code_link:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'td.tyycCell:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_name_link:
+      css: 'tr:nth-of-type(n+5) td.tyycCell:nth-of-type(2) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_elective:
+      css: 'td.tyycCell:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_hours:
+      css: 'td.tyycCell.text-center label'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'td.tyycCell:nth-of-type(5)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_each_table_total_credits:
+      css: 'td.tyycCell.text-center:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    total_credits:
+      css: 'div:nth-of-type(9)'
+      xpath: null
+      type: Text
+
+
+  Get_course_page:
+    course_description:
+      css: 'div.container div.container div:nth-of-type(3) tr:nth-of-type(5) td:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+  Pagination:
+    required: True
+
+  Collect_Pagination_numbers:
+    total_pages_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+3) a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Collect_Pagination_urls:
+    total_pages_urls_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+4) a'
+      xpath: null
+      multiple: true
+      type: Link
+
+  Click_next_button:
+    required: True
+    Xpath: /html/body/div[2]/div[3]/div[1]/div[1]/ul/li[7]
+
+  Get_course_pagination:
+    course_codes_multiple:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_codes_links:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'h1.panel-title a:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'div.panel-body > div:nth-of-type(1) label:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+https://ects-bilgi-edu-tr.translate.goog/Department?cid=39&cycleNo=2&_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: "Masters"
+  DEGREE_TYPE: Masters
+  PROGRAM: Graduate
+  UNIVERSITY: 'Istanbul Bilgi University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://ects-bilgi-edu-tr.translate.goog
+  PROJECT: https://ects-bilgi-edu-tr.translate.goog/Institutional?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc
+  URL: https://ects-bilgi-edu-tr.translate.goog
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%Master%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Graduate%'
+
+  Get_course_Requirement:
+    course_code:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_code_link:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'td.tyycCell:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_name_link:
+      css: 'tr:nth-of-type(n+5) td.tyycCell:nth-of-type(2) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_elective:
+      css: 'td.tyycCell:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_hours:
+      css: 'td.tyycCell.text-center label'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'td.tyycCell:nth-of-type(5)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_each_table_total_credits:
+      css: 'td.tyycCell.text-center:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    total_credits:
+      css: 'div:nth-of-type(9)'
+      xpath: null
+      type: Text
+
+
+  Get_course_page:
+    course_description:
+      css: 'div.container div.container div:nth-of-type(3) tr:nth-of-type(5) td:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+  Pagination:
+    required: True
+
+  Collect_Pagination_numbers:
+    total_pages_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+3) a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Collect_Pagination_urls:
+    total_pages_urls_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+4) a'
+      xpath: null
+      multiple: true
+      type: Link
+
+  Click_next_button:
+    required: True
+    Xpath: /html/body/div[2]/div[3]/div[1]/div[1]/ul/li[7]
+
+  Get_course_pagination:
+    course_codes_multiple:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_codes_links:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'h1.panel-title a:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'div.panel-body > div:nth-of-type(1) label:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+https://ects-bilgi-edu-tr.translate.goog/Department?cid=39&cycleNo=3&_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: "Masters"
+  DEGREE_TYPE: Masters
+  PROGRAM: Graduate
+  UNIVERSITY: 'Istanbul Bilgi University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://ects-bilgi-edu-tr.translate.goog
+  PROJECT: https://ects-bilgi-edu-tr.translate.goog/Institutional?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en-GB&_x_tr_pto=sc
+  URL: https://ects-bilgi-edu-tr.translate.goog
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%PhD%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Graduate%'
+
+  Get_course_Requirement:
+    course_code:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_code_link:
+      css: 'td.tyycCell:nth-of-type(1) a'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'td.tyycCell:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_name_link:
+      css: 'tr:nth-of-type(n+5) td.tyycCell:nth-of-type(2) a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_elective:
+      css: 'td.tyycCell:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_hours:
+      css: 'td.tyycCell.text-center label'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'td.tyycCell:nth-of-type(5)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_each_table_total_credits:
+      css: 'td.tyycCell.text-center:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    total_credits:
+      css: 'div:nth-of-type(9)'
+      xpath: null
+      type: Text
+
+
+  Get_course_page:
+    course_description:
+      css: 'div.container div.container div:nth-of-type(3) tr:nth-of-type(5) td:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+  Pagination:
+    required: True
+
+  Collect_Pagination_numbers:
+    total_pages_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+3) a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Collect_Pagination_urls:
+    total_pages_urls_collected:
+      css: 'div.row:nth-of-type(1) div.hidden-xs li:nth-of-type(n+4) a'
+      xpath: null
+      multiple: true
+      type: Link
+
+  Click_next_button:
+    required: True
+    Xpath: /html/body/div[2]/div[3]/div[1]/div[1]/ul/li[7]
+
+  Get_course_pagination:
+    course_codes_multiple:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_codes_links:
+      css: 'h1.panel-title a:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Link
+    course_name:
+      css: 'h1.panel-title a:nth-of-type(2)'
+      xpath: null
+      multiple: true
+      type: Text
+    course_ects:
+      css: 'div.panel-body > div:nth-of-type(1) label:nth-of-type(1)'
+      xpath: null
+      multiple: true
+      type: Text
+

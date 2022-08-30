@@ -1,0 +1,59 @@
+C:/Program Files/geckodriver-v0.29.1-win64/geckodriver.exe: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe [FLAGS] [OPTIONS]
+
+For more information try --help
+
+C:/Program Files/geckodriver-v0.29.1-win64/geckodriver.exe: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe [FLAGS] [OPTIONS]
+
+For more information try --help
+
+1644420395240	geckodriver	INFO	Listening on 127.0.0.1:59797
+1644420398246	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\RAGHA\\AppData\\Local\\Temp\\rust_mozprofileOHLlrA"
+*** You are running in headless mode.
+1644420402270	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RAGHA\\AppData\\Local\\Temp\\rust_mozprofileOHLlrA\\search.json.mozlz4", (void 0)))
+1644420412793	Marionette	INFO	Listening on port 59806
+1644420413631	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644420590920	geckodriver	INFO	Listening on 127.0.0.1:62623
+1644420593979	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\RAGHA\\AppData\\Local\\Temp\\rust_mozprofilel57Xo4"
+*** You are running in headless mode.
+1644420595546	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RAGHA\\AppData\\Local\\Temp\\rust_mozprofilel57Xo4\\search.json.mozlz4", (void 0)))
+1644420598425	Marionette	INFO	Listening on port 62631
+1644420599758	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+C:/Program Files/geckodriver-v0.29.1-win64/geckodriver.exe: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe [FLAGS] [OPTIONS]
+
+For more information try --help
+
+C:/Program Files/geckodriver-v0.29.1-win64/geckodriver.exe: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe [FLAGS] [OPTIONS]
+
+For more information try --help
+
+C:/Program Files/geckodriver-v0.29.1-win64/geckodriver.exe: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe [FLAGS] [OPTIONS]
+
+For more information try --help
+
+C:/Program Files/geckodriver-v0.29.1-win64/geckodriver.exe: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver.exe [FLAGS] [OPTIONS]
+
+For more information try --help
+

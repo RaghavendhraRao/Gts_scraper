@@ -1,0 +1,2221 @@
+https://degrees.apps.asu.edu/bachelors/major-list/keyword/BGM:
+
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: BA
+  DEGREE_TYPE: Bachelor
+  PROGRAM: Undergraduate
+  UNIVERSITY: 'Arizona State University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://degrees.apps.asu.edu
+  PROJECT: https://degrees.apps.asu.edu/bachelors/major-list/keyword/BGM
+  URL: https://degrees.apps.asu.edu
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+#  MAJOR_MAP: https://webapp4.asu.edu/programs/t5/roadmaps/ASU00/TBTGMBGM/TGMBCSPC/ALL/2021
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%Bachelor%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate%'
+  Requirement_type:
+    required: True
+  Major_Map_BGM:
+    required: True
+  LOGIN_URL:
+  Login:
+    required: False
+    username:
+    password:
+  Click_next_button:
+    required: True
+    Xpath: //*[@id="CourseCatalogList_next"]
+  Class_Search_Pages:                           ###Pagination //*[@id="CourseCatalogList_next"]
+    Urls:
+      css: 'li:nth-of-type(n+2) a.change-page'
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: page
+  Click_next_class_page:
+    required: True
+    Xpath: '//*[@id="Any_24"]'
+  Pagination:
+    required: True
+  Pagination_urls:
+    Urls:
+      css: 'a.paginate_button '
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: data-dt-idx
+#  Thread_urls:
+#    Urls:
+#      css: a.majorUrl
+#      xpath: null
+#      multiple: true
+#      type: Link
+  Post_course:
+    title_urls:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Link
+    title:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Text
+    degree:
+      css: 'span.tt_local span.tt'
+      xpath: null
+      multiple: true
+      type: Text
+    map:
+      css: 'td.MajorMap a'
+      xpath: null
+      type: Link
+    location:
+      css: a.ttCampus
+      xpath: null
+      multiple: true
+      type: Text
+    concurrent:
+      css: td.online
+      xpath: null
+      type: Text
+    college:
+      css: 'td.collegeAlpha a'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+  Post_summary_1:
+#    Course_Title:
+#      css: 'div.fieldable-panels-pane h2'
+#      xpath: null
+#      type: Text
+    Program_title:
+      css: 'h2.pane-title > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_code:
+      css: 'div.left div'
+      xpath: null
+      type: Text
+    Program_description:
+#      css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+      css: 'div.mobileRow:nth-of-type(3) div.mobileCell > div'
+      xpath: null
+      type: Text
+    #At a Glance
+    College:
+      css: a.tt
+      xpath: null
+      type: Text
+    Additional_Program_Fee:
+      css: 'div.mobileCell > ul li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Second_Language_Requirement:
+      css: 'div.mobileCell > ul li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    First_Required_Math_Course:
+      css: 'div.mobileCell li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Math_Intensity:
+      css: 'span.tt_noTitle:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+#    At_a_glance:
+#      css: 'div.mobileRow:nth-of-type(5) '
+#      xpath: null
+#      type: Text
+    Major_map:
+      css: 'a span.underline'
+      xpath: '//*[@id="userMenuHeader"]/span/span/a'
+      type: Link
+    Major_map_oncampus:
+      css: 'div.mm_subplan a:nth-of-type(1)'
+      xpath: null
+      type: Link
+    Major_map_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Major_map_concurrent:
+      css: 'div.majormap-box div:nth-of-type(1) a.underline'
+      xpath: null
+      type: Link
+
+    Accelerated_program_options:
+      css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Admission_requirements:
+      css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+      xpath: null
+      type: Text
+    Change_of_major_requirements:
+      css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+      xpath: null
+      type: Text
+    Attend_online:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell'
+      xpath: null
+      type: Text
+    Transfer_options:
+      css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+      xpath: null
+      type: Text
+    Global_opportunities:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell div'
+      xpath: null
+      type: Text
+    Career_opportunities:
+      css: 'div.mobileRow:nth-of-type(19) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Contact_Information:
+      css: 'div.mobileRow:nth-of-type(21) p'
+      xpath: null
+      type: Text
+
+  Post_summary_2:
+#      Course_Title:
+#        css: 'div.fieldable-panels-pane h2'
+#        xpath: null
+#        type: Text
+      Program_title:
+        css: 'h2.pane-title > span:nth-of-type(1)'
+        xpath: null
+        type: Text
+      Program_code:
+        css: 'div.left div'
+        xpath: null
+        type: Text
+      Program_description:
+        css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+        xpath: null
+        type: Text
+      Additional_Program_Fee:
+        css: 'div.mobileCell > ul li:nth-of-type(1)'
+        xpath: null
+        type: Text
+      Second_Language_Requirement:
+        css: 'div.mobileCell > ul li:nth-of-type(2)'
+        xpath: null
+        type: Text
+      First_Required_Math_Course:
+        css: 'div.mobileCell li:nth-of-type(3)'
+        xpath: null
+        type: Text
+      Math_Intensity:
+        css: 'span.tt_noTitle:nth-of-type(2)'
+        xpath: null
+        type: Text
+#      At_a_glance:
+#        css: 'div.mobileRow:nth-of-type(5) '
+#        xpath: null
+#        type: Text
+
+      Major_map:
+        css: 'a span.underline'
+        xpath: '//*[@id="userMenuHeader"]/span/span/a'
+        type: Link
+      Major_map_oncampus:
+        css: 'div.mm_subplan a:nth-of-type(1)'
+        xpath: null
+        type: Link
+      Major_map_online:
+        css: 'div.mm_subplan a:nth-of-type(2)'
+        xpath: null
+        type: Link
+      Major_map_concurrent:
+        css: 'div.majormap-box div:nth-of-type(1) a.underline'
+        xpath: null
+        type: Link
+      Accelerated_program_options:
+        css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+        xpath: null
+        type: Text
+      Admission_requirements:
+        css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+        xpath: null
+        type: Text
+      Change_of_major_requirements:
+        css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+        xpath: null
+        type: Text
+      Attend_online:
+        css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+        xpath: null
+        type: Text
+      Transfer_options:
+        css: 'div.mobileRow:nth-of-type(17) div.mobileCell'
+        xpath: null
+        type: Text
+      Global_opportunities:
+        css: 'div.mobileRow:nth-of-type(19) div.mobileCell div'
+        xpath: null
+        type: Text
+      Career_opportunities:
+        css: 'div.mobileRow:nth-of-type(21) div.mobileCell > div'
+        xpath: null
+        type: Text
+      Contact_Information:
+        css: 'div.mobileRow:nth-of-type(23) p'
+        xpath: null
+        type: Text
+
+
+  Post_curriculum:
+    subject_raw_text:
+      css: 'td.underline div.outputMessage'
+      xpath: null
+      multiple: true
+      type: Text
+    subject:
+      css: 'td.underline div.outputMessage a'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_link:
+      css: 'td.underline div.outputMessage a'
+      xpath: null
+      multiple: true
+      type: Link
+    subject_hours:
+      css: 'td.underline:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_minium_grade:
+      css: 'td.underline:nth-of-type(4)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_term_heading:
+    Term:
+      css: span.term
+      xpath: null
+      multiple: true
+      type: Text
+    Credit_hours:
+      css: span.termCount
+      xpath: null
+      multiple: true
+      type: Text
+
+#    Notes:
+#      css: 'table.termTbl:nth-of-type(n+2) > tbody > tr:nth-of-type(2) > td:nth-of-type(2)'
+#      xpath: null
+#      multiple: true
+#      type: Text
+
+
+  Post_curriculum_requirements_hours:
+    Program_year:
+      css: 'td.mayorInfoTd.mobile-no-display span.left > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_name:
+      css: 'td.mayorInfoTd.mobile-no-display span.left span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    College_name:
+      css: 'td.mayorInfoTd.mobile-no-display a.tt'
+      xpath: null
+      type: Text
+    Location_type:
+      css: 'td.mayorInfoTd.mobile-no-display a.ttCampus'
+      xpath: null
+      multiple: true
+      type: Text
+    Total_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Upper_Division_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Cumulative_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(4)'
+      xpath: null
+      type: Text
+    Total_hrs_at_ASU:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(5)'
+      xpath: null
+      type: Text
+    Hrs_Resident_Credit_for_Academic_Recognition:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(6)'
+      xpath: null
+      type: Text
+    Total_Community_College_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(7)'
+      xpath: null
+      type: Text
+    Total_College_Residency_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(8)'
+      xpath: null
+      type: Text
+#  Post_curriculum_university_requirements:
+    Subject_General_Studies_Core_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(2) li:nth-of-type(n+3)'
+      xpath: null
+      multiple: true
+      type: Text
+    Subject_General_Studies_Awareness_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(3) li:nth-of-type(n+2)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_course_offering_college:
+    Course_title:
+      css: 'h2 span'
+      xpath: null
+      type: Text
+    Course_Academic_year:
+      css: 'td.mayorInfoTd.mobile-no-display span.left > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Course_degree:
+      css: 'span.mm_t2 span.tt'
+      xpath: null
+      type: Text
+    College:
+      css: 'td.mayorInfoTd.mobile-no-display a.tt'
+      xpath: null
+      type: Text
+    College_link:
+      css: 'td.mayorInfoTd.mobile-no-display a.tt'
+      xpath: null
+      type: Link
+    Location:
+      css: 'td.mayorInfoTd.mobile-no-display a.ttCampus'
+      xpath: null
+      type: Text
+      multiple: true
+
+
+  Post_curriculum_summary_1:
+    course_code:
+      css: 'td.subjectNumberColumnValue span'
+      xpath: null
+      type: Text
+      multiple: true
+    Course_title:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Text
+    Course_title_link:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Link
+#    Course_description:
+#      css: td.courseTitleLongColumnValue
+#      xpath: null
+#      multiple: true
+#      type: Text
+    course_description:
+      css: 'p span'
+      xpath: null
+      multiple: true
+      type: Text
+    course_college_dept:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_prerequisites:
+      css: div.enrollReq
+      xpath: null
+      multiple: true
+      type: Text
+    Course_credits:
+      css: td.hoursColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Course_gs:
+      css: 'td.tooltipRqDesDescrColumnValue div'
+      xpath: null
+      multiple: true
+      type: Text
+    Allow_multiple_enrollments:
+      css: 'span span span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: 'span span span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Primary_course_component:
+      css: 'label:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Grading_method:
+      css: 'label:nth-of-type(4)'
+      xpath: null
+      type: Text
+
+
+  Search_path:
+    Xpath: //*[@id="details-side-panel"]/label[5]
+
+  Post_curriculum_summary_2:
+    Title:
+      css: 'div.col-md-6 h2'
+      xpath: null
+      type: Text
+    Course_description:
+      css: 'div.col-md-6:nth-of-type(1)'
+      xpath: null
+      type: Text
+    College_title:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    College_title_link:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Link
+    Course_offering_season:
+      css: 'div.col-md-6 div h3'
+      xpath: null
+      type: Text
+    Number_of_Units:
+      css: span.crs-units
+      xpath: null
+      type: Text
+    Allow_Multiple_Enrollments:
+      css: 'div.col-md-6 div span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    General_Studies:
+      css: span.crs-genstuds
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: span.crs-repeatable
+      xpath: null
+      type: Text
+
+
+#https://degrees.apps.asu.edu/bachelors/major-list/keyword/Actuarial%20Science:
+#https://degrees.apps.asu.edu/bachelors/major-list/keyword/Jewish%20Studies:
+https://degrees.apps.asu.edu/bachelors/major-list/accelerated-programs:
+
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: BA
+  DEGREE_TYPE: Bachelor
+  PROGRAM: Undergraduate
+  UNIVERSITY: 'Arizona State University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://degrees.apps.asu.edu
+  PROJECT: https://degrees.apps.asu.edu/bachelors/major-list/accelerated-programs
+  URL: https://degrees.apps.asu.edu
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%Bachelor%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate%'
+  Requirement_type:
+    required: True
+  Major_Map_BGM:
+    required: False
+  LOGIN_URL:
+  Login:
+    required: False
+    username:
+    password:
+  Click_next_button:
+    required: True
+    Xpath: //*[@id="CourseCatalogList_next"]
+  Class_Search_Pages:                           ###Pagination //*[@id="CourseCatalogList_next"]
+    Urls:
+      css: 'li:nth-of-type(n+2) a.change-page'
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: page
+  Click_next_class_page:
+    required: True
+    Xpath: '//*[@id="Any_24"]'
+  Pagination:
+    required: True
+  Pagination_urls:
+    Urls:
+      css: 'a.paginate_button '
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: data-dt-idx
+#  Thread_urls:
+#    Urls:
+#      css: a.majorUrl
+#      xpath: null
+#      multiple: true
+#      type: Link
+  Post_course:
+    title_urls:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Link
+    title:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Text
+    degree:
+      css: 'span.tt_local span.tt'
+      xpath: null
+      multiple: true
+      type: Text
+    map:
+      css: 'td.MajorMap a'
+      xpath: null
+      type: Link
+    location:
+      css: a.ttCampus
+      xpath: null
+      multiple: true
+      type: Text
+    concurrent:
+      css: td.online
+      xpath: null
+      type: Text
+    college:
+      css: 'td.collegeAlpha a'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+  Post_summary_1:
+#    Course_Title:
+#      css: 'div.fieldable-panels-pane h2'
+#      xpath: null
+#      type: Text
+    Program_title:
+      css: 'h2.pane-title > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_code:
+      css: 'div.left div'
+      xpath: null
+      type: Text
+    Program_description:
+#      css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+      css: 'div.mobileRow:nth-of-type(3) div.mobileCell > div'
+      xpath: null
+      type: Text
+    #At a Glance
+    College:
+      css: a.tt
+      xpath: null
+      type: Text
+    Additional_Program_Fee:
+      css: 'div.mobileCell > ul li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Second_Language_Requirement:
+      css: 'div.mobileCell > ul li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    First_Required_Math_Course:
+      css: 'div.mobileCell li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Math_Intensity:
+      css: 'span.tt_noTitle:nth-of-type(2)'
+      xpath: null
+      type: Text
+
+#    At_a_glance:
+#      css: 'div.mobileRow:nth-of-type(5) '
+#      xpath: null
+#      type: Text
+    Major_map:
+      css: 'a span.underline'
+      xpath: '//*[@id="userMenuHeader"]/span/span/a'
+      type: Link
+    Major_map_oncampus:
+      css: 'div.mm_subplan a:nth-of-type(1)'
+      xpath: null
+      type: Link
+    Major_map_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Major_map_concurrent:
+      css: 'div.majormap-box div:nth-of-type(1) a.underline'
+      xpath: null
+      type: Link
+
+    Accelerated_program_options:
+      css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Admission_requirements:
+      css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+      xpath: null
+      type: Text
+    Change_of_major_requirements:
+      css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+      xpath: null
+      type: Text
+    Attend_online:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell'
+      xpath: null
+      type: Text
+    Transfer_options:
+      css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+      xpath: null
+      type: Text
+    Global_opportunities:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell div'
+      xpath: null
+      type: Text
+    Career_opportunities:
+      css: 'div.mobileRow:nth-of-type(19) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Contact_Information:
+      css: 'div.mobileRow:nth-of-type(21) p'
+      xpath: null
+      type: Text
+
+  Post_summary_2:
+#      Course_Title:
+#        css: 'div.fieldable-panels-pane h2'
+#        xpath: null
+#        type: Text
+      Program_title:
+        css: 'h2.pane-title > span:nth-of-type(1)'
+        xpath: null
+        type: Text
+      Program_code:
+        css: 'div.left div'
+        xpath: null
+        type: Text
+      Program_description:
+        css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+        xpath: null
+        type: Text
+      Additional_Program_Fee:
+        css: 'div.mobileCell > ul li:nth-of-type(1)'
+        xpath: null
+        type: Text
+      Second_Language_Requirement:
+        css: 'div.mobileCell > ul li:nth-of-type(2)'
+        xpath: null
+        type: Text
+      First_Required_Math_Course:
+        css: 'div.mobileCell li:nth-of-type(3)'
+        xpath: null
+        type: Text
+      Math_Intensity:
+        css: 'span.tt_noTitle:nth-of-type(2)'
+        xpath: null
+        type: Text
+#      At_a_glance:
+#        css: 'div.mobileRow:nth-of-type(5) '
+#        xpath: null
+#        type: Text
+
+      Major_map:
+        css: 'a span.underline'
+        xpath: '//*[@id="userMenuHeader"]/span/span/a'
+        type: Link
+      Major_map_oncampus:
+        css: 'div.mm_subplan a:nth-of-type(1)'
+        xpath: null
+        type: Link
+      Major_map_online:
+        css: 'div.mm_subplan a:nth-of-type(2)'
+        xpath: null
+        type: Link
+      Major_map_concurrent:
+        css: 'div.majormap-box div:nth-of-type(1) a.underline'
+        xpath: null
+        type: Link
+      Accelerated_program_options:
+        css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+        xpath: null
+        type: Text
+      Admission_requirements:
+        css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+        xpath: null
+        type: Text
+      Change_of_major_requirements:
+        css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+        xpath: null
+        type: Text
+      Attend_online:
+        css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+        xpath: null
+        type: Text
+      Transfer_options:
+        css: 'div.mobileRow:nth-of-type(17) div.mobileCell'
+        xpath: null
+        type: Text
+      Global_opportunities:
+        css: 'div.mobileRow:nth-of-type(19) div.mobileCell div'
+        xpath: null
+        type: Text
+      Career_opportunities:
+        css: 'div.mobileRow:nth-of-type(21) div.mobileCell > div'
+        xpath: null
+        type: Text
+      Contact_Information:
+        css: 'div.mobileRow:nth-of-type(23) p'
+        xpath: null
+        type: Text
+
+
+  Post_curriculum:
+    subject_raw_text:
+      css: 'td.underline div.outputMessage'
+      xpath: null
+      multiple: true
+      type: Text
+    subject:
+      css: 'td.underline div.outputMessage a'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_link:
+      css: 'td.underline div.outputMessage a'
+      xpath: null
+      multiple: true
+      type: Link
+    subject_hours:
+      css: 'td.underline:nth-of-type(3)'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_minium_grade:
+      css: 'td.underline:nth-of-type(4)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_term_heading:
+    Term:
+      css: span.term
+      xpath: null
+      multiple: true
+      type: Text
+    Credit_hours:
+      css: span.termCount
+      xpath: null
+      multiple: true
+      type: Text
+
+#    Notes:
+#      css: 'table.termTbl:nth-of-type(n+2) > tbody > tr:nth-of-type(2) > td:nth-of-type(2)'
+#      xpath: null
+#      multiple: true
+#      type: Text
+
+
+  Post_curriculum_requirements_hours:
+    Program_year:
+      css: 'td.mayorInfoTd.mobile-no-display span.left > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_name:
+      css: 'td.mayorInfoTd.mobile-no-display span.left span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    College_name:
+      css: 'td.mayorInfoTd.mobile-no-display a.tt'
+      xpath: null
+      type: Text
+    Location_type:
+      css: 'td.mayorInfoTd.mobile-no-display a.ttCampus'
+      xpath: null
+      multiple: true
+      type: Text
+    Total_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Upper_Division_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Cumulative_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(4)'
+      xpath: null
+      type: Text
+    Total_hrs_at_ASU:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(5)'
+      xpath: null
+      type: Text
+    Hrs_Resident_Credit_for_Academic_Recognition:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(6)'
+      xpath: null
+      type: Text
+    Total_Community_College_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(7)'
+      xpath: null
+      type: Text
+    Total_College_Residency_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(8)'
+      xpath: null
+      type: Text
+#  Post_curriculum_university_requirements:
+    Subject_General_Studies_Core_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(2) li:nth-of-type(n+3)'
+      xpath: null
+      multiple: true
+      type: Text
+    Subject_General_Studies_Awareness_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(3) li:nth-of-type(n+2)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_course_offering_college:
+    Course_title:
+      css: 'h2 span'
+      xpath: null
+      type: Text
+    Course_Academic_year:
+      css: 'td.mayorInfoTd.mobile-no-display span.left > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Course_degree:
+      css: 'span.mm_t2 span.tt'
+      xpath: null
+      type: Text
+    College:
+      css: 'td.mayorInfoTd.mobile-no-display a.tt'
+      xpath: null
+      type: Text
+    College_link:
+      css: 'td.mayorInfoTd.mobile-no-display a.tt'
+      xpath: null
+      type: Link
+    Location:
+      css: 'td.mayorInfoTd.mobile-no-display a.ttCampus'
+      xpath: null
+      type: Text
+      multiple: true
+
+
+  Post_curriculum_summary_1:
+    course_code:
+      css: 'td.subjectNumberColumnValue span'
+      xpath: null
+      type: Text
+      multiple: true
+    Course_title:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Text
+    Course_title_link:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Link
+#    Course_description:
+#      css: td.courseTitleLongColumnValue
+#      xpath: null
+#      multiple: true
+#      type: Text
+    course_description:
+      css: 'p span'
+      xpath: null
+      multiple: true
+      type: Text
+    course_college_dept:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_prerequisites:
+      css: div.enrollReq
+      xpath: null
+      multiple: true
+      type: Text
+    Course_credits:
+      css: td.hoursColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Course_gs:
+      css: 'td.tooltipRqDesDescrColumnValue div'
+      xpath: null
+      multiple: true
+      type: Text
+    Allow_multiple_enrollments:
+      css: 'span span span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: 'span span span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Primary_course_component:
+      css: 'label:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Grading_method:
+      css: 'label:nth-of-type(4)'
+      xpath: null
+      type: Text
+
+
+  Search_path:
+    Xpath: //*[@id="details-side-panel"]/label[5]
+
+  Post_curriculum_summary_2:
+    Title:
+      css: 'div.col-md-6 h2'
+      xpath: null
+      type: Text
+    Course_description:
+      css: 'div.col-md-6:nth-of-type(1)'
+      xpath: null
+      type: Text
+    College_title:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    College_title_link:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Link
+    Course_offering_season:
+      css: 'div.col-md-6 div h3'
+      xpath: null
+      type: Text
+    Number_of_Units:
+      css: span.crs-units
+      xpath: null
+      type: Text
+    Allow_Multiple_Enrollments:
+      css: 'div.col-md-6 div span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    General_Studies:
+      css: span.crs-genstuds
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: span.crs-repeatable
+      xpath: null
+      type: Text
+
+# Class based search
+  Post_class_search:
+    Course_code:
+      css: td.subjectNumberColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Title:
+      css: td.titleColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Class_code:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Text
+    Class_code_link:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Link
+    Units:
+      css: td.hoursColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Seats_Open:
+      css: td.availableSeatsColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_class_in_details:
+    Class_title:
+      css: 'div.col-md-6 h2'
+      xpath: null
+      type: Text
+    Course_Description:
+      css: 'div.col-md-6 > p:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Enrollment_requirements:
+      css: p.crs-enroll-reqs
+      xpath: null
+      type: Text
+    Reserved_Seat_Information:
+      css: 'span p'
+      xpath: null
+      type: Text
+    Reserved_Groups:
+      css: 'tr#For_1 td:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Reserved_Available_Seats:
+      css: 'table.table.table-striped td:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Students_Enrolled:
+      css: 'table.table.table-striped td:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Total_Seats_Reserved:
+      css: 'table.table.table-striped td:nth-of-type(4)'
+      xpath: null
+      type: Text
+    Reserved_Until:
+      css: 'table.table.table-striped td:nth-of-type(5)'
+      xpath: null
+      type: Text
+    Non_Reserved_Available_Seats:
+      css: td.total
+      xpath: null
+      type: Text
+    Class_Offered_by:
+      css: 'a#GenericLink'
+      xpath: null
+      type: Text
+    Class_Offered_by_link:
+      css: 'a#GenericLink'
+      xpath: null
+      type: Link
+    Special_notes:
+      css: 'div.col-md-6 div.row:nth-of-type(1) div.col-sm-6 > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    General_Studies:
+      css: span.crs-genstuds
+      xpath: null
+      type: Text
+    Repeatable_credit:
+      css: span.crs-repeatable
+      xpath: null
+      type: Text
+#    Combined_with:
+#      css: 'div.col-sm-6 a'
+#      xpath: null
+#      type: Text
+#    Combined_with_link:
+#      css: 'div.col-sm-6 a'
+#      xpath: null
+#      type: Link
+    combined_with:
+      css: 'div.col-sm-6:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Important_Deadlines_dates:
+      css: 'div.row:nth-of-type(2) div.col-sm-6'
+      xpath: null
+      type: Text
+    Class_year_term:
+      css: 'div.col-md-6 div h3'
+      xpath: null
+      type: Text
+    Fees:
+      css: 'span:nth-of-type(2) span'
+      xpath: null
+      type: Text
+    Class_days:
+      css: td.cla
+      xpath: null
+      type: Text
+    Class_dates:
+      css: 'td.class-values:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Start:
+      css: 'td.class-values:nth-of-type(3)'
+      xpath: null
+      type: Text
+    End:
+      css: td.class-values.end-value
+      xpath: null
+      type: Text
+    Location:
+      css: td.class-values.lo
+      xpath: null
+      type: Text
+    Instructor:
+      css: 'td.class-values:nth-of-type(6)'
+      xpath: null
+      type: Text
+    Syllabus:
+      css: 'a#Any_4'
+      xpath: null
+      type: Link
+
+### Class Course_Materials
+  Post_Course_Materials:
+    Course_Material_image:
+      css: 'div.book-img img'
+      xpath: null
+      type: Image
+    Title:
+      css: 'div.info:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Author:
+      css: 'div.info:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Edition:
+      css: 'div.info:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Copyright_Year:
+      css: 'div.info:nth-of-type(4)'
+      xpath: null
+      type: Text
+    Publisher:
+      css: 'div.info:nth-of-type(5)'
+      xpath: null
+      type: Text
+    ISBN:
+      css: 'div.info:nth-of-type(6)'
+      xpath: null
+      type: Text
+    Price_New:
+      css: 'div.info:nth-of-type(7)'
+      xpath: null
+      type: Text
+    Price_Used:
+      css: 'div.info:nth-of-type(8)'
+      xpath: null
+      type: Text
+    Rental_Price_New:
+      css: 'div.info:nth-of-type(9)'
+      xpath: null
+      type: Text
+    Rental_Price_Used:
+      css: 'div.info:nth-of-type(10)'
+      xpath: null
+      type: Text
+    Digital_Rental_Price:
+      css: 'div.info:nth-of-type(11)'
+      xpath: null
+      type: Text
+    Digital_Price:
+      css: 'div.info:nth-of-type(12)'
+      xpath: null
+      type: Text
+
+
+
+# <-----------Graduate degree(MS)---------->
+https://degrees.apps.asu.edu/masters-phd/major-list/keyword/Project%20Management,%20MPM:
+https://degrees.apps.asu.edu/masters-phd/major-list/keyword/Engineering%20Science%20(Software%20Engineering),%20MSE:
+https://degrees.apps.asu.edu/masters-phd/major-list/accelerated-programs:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: MS
+  DEGREE_TYPE: Masters
+  PROGRAM: Graduate
+  UNIVERSITY: 'Arizona State University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://degrees.apps.asu.edu
+  PROJECT: https://degrees.apps.asu.edu/masters-phd/major-list/accelerated-programs
+  URL: https://degrees.apps.asu.edu
+  START_SCRAPE: True
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%Master%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Graduate%'
+  Requirement_type:
+    required: True
+  Major_Map_BGM:
+    required: False
+  Click_next_button:
+    required: True
+    Xpath: //*[@id="CourseCatalogList_next"]
+  Pagination:
+    required: True
+  Pagination_urls:
+    Urls:
+      css: 'a.paginate_button '
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: data-dt-idx
+
+  Post_course:
+    title_urls:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Link
+    title:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Text
+    degree:
+      css: 'span.tt_local span.tt'
+      xpath: null
+      multiple: true
+      type: Text
+    map:
+      css: 'td.MajorMap a'
+      xpath: null
+      type: Link
+    location:
+      css: a.ttCampus
+      xpath: null
+      multiple: true
+      type: Text
+    concurrent:
+      css: td.online
+      xpath: null
+      type: Text
+    college:
+      css: 'td.collegeAlpha a'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+  Post_summary_1:
+#    Course_Title:
+#      css: 'div.fieldable-panels-pane h2'
+#      xpath: null
+#      type: Text
+    Program_title:
+      css: 'h2.pane-title > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_code:
+      css: 'div.left div'
+      xpath: null
+      type: Text
+    Program_description:
+#      css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+      css: 'div.mobileRow:nth-of-type(3) div.mobileCell > div'
+      xpath: null
+      type: Text
+    #At a Glance
+    College:
+      css: a.tt
+      xpath: null
+      type: Text
+    Additional_Program_Fee:
+      css: 'div.mobileCell > ul li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Second_Language_Requirement:
+      css: 'div.mobileCell > ul li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    First_Required_Math_Course:
+      css: 'div.mobileCell li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Math_Intensity:
+      css: 'span.tt_noTitle:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_map:
+      css: 'a span.underline'
+      xpath: '//*[@id="userMenuHeader"]/span/span/a'
+      type: Link
+    Major_map_oncampus:
+      css: 'div.mm_subplan a:nth-of-type(1)'
+      xpath: null
+      type: Link
+    Major_map_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Major_map_concurrent:
+      css: 'div.majormap-box div:nth-of-type(1) a.underline'
+      xpath: null
+      type: Link
+
+    Accelerated_program_options:
+      css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Admission_requirements:
+      css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+      xpath: null
+      type: Text
+    Change_of_major_requirements:
+      css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+      xpath: null
+      type: Text
+    Attend_online:
+      css: 'div.mobileRow:nth-of-type(15) div.mobileCell > div'
+      xpath: null
+      type: Text
+#    Transfer_options:
+#      css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+#      xpath: null
+#      type: Text
+    Global_opportunities:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell div'
+      xpath: null
+      type: Text
+    Career_opportunities:
+      css: 'div.mobileRow:nth-of-type(19) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Contact_Information:
+      css: 'div.mobileRow:nth-of-type(21) p'
+      xpath: null
+      type: Text
+
+  Post_curriculum_summary_1:
+    course_code:
+      css: 'td.subjectNumberColumnValue span'
+      xpath: null
+      type: Text
+      multiple: true
+    Course_title:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Text
+    Course_title_link:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Link
+#    Course_description:
+#      css: td.courseTitleLongColumnValue
+#      xpath: null
+#      multiple: true
+#      type: Text
+    course_description:
+      css: 'p span'
+      xpath: null
+      multiple: true
+      type: Text
+    course_college_dept:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_prerequisites:
+      css: div.enrollReq
+      xpath: null
+      multiple: true
+      type: Text
+    Course_credits:
+      css: td.hoursColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Course_gs:
+      css: 'td.tooltipRqDesDescrColumnValue div'
+      xpath: null
+      multiple: true
+      type: Text
+    Allow_multiple_enrollments:
+      css: 'span span span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: 'span span span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Primary_course_component:
+      css: 'label:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Grading_method:
+      css: 'label:nth-of-type(4)'
+      xpath: null
+      type: Text
+
+
+  Search_path:
+    Xpath: //*[@id="details-side-panel"]/label[5]
+
+  Post_curriculum_summary_2:
+    Title:
+      css: 'div.col-md-6 h2'
+      xpath: null
+      type: Text
+    Course_description:
+      css: 'div.col-md-6:nth-of-type(1)'
+      xpath: null
+      type: Text
+    College_title:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    College_title_link:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Link
+    Course_offering_season:
+      css: 'div.col-md-6 div h3'
+      xpath: null
+      type: Text
+    Number_of_Units:
+      css: span.crs-units
+      xpath: null
+      type: Text
+    Allow_Multiple_Enrollments:
+      css: 'div.col-md-6 div span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    General_Studies:
+      css: span.crs-genstuds
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: span.crs-repeatable
+      xpath: null
+      type: Text
+
+
+
+# <--------- Minors --------->
+https://degrees.apps.asu.edu/minors/major-list/keyword/Minor:
+#https://webapp4.asu.edu/programs/t5/programs/Keyword/minor/undergrad/true:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: minor
+  DEGREE_TYPE: minor
+  PROGRAM: minor
+  UNIVERSITY: 'Arizona State University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://webapp4.asu.edu
+  PROJECT: https://degrees.apps.asu.edu/minors/major-list/keyword/Minor
+  URL: https://webapp4.asu.edu
+  START_SCRAPE: False
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%minor%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate Minors and Certificates%'
+  Requirement_type:
+    required: False
+  Major_Map_BGM:
+    required: False
+  Click_next_button:
+    required: True
+    Xpath: //*[@id="CourseCatalogList_next"]
+  Pagination:
+    required: True
+  Pagination_urls:
+    Urls:
+      css: 'a.paginate_button '
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: data-dt-idx
+
+  Post_course:
+    title:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Text
+    title_urls:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Link
+    degree:
+      css: td.degree
+      xpath: null
+      multiple: true
+      type: Text
+    map:
+      css: 'td.MajorMap a'
+      xpath: null
+      type: Link
+    location:
+      css: a.ttCampus
+      xpath: null
+      multiple: true
+      type: Text
+    concurrent:
+      css: td.online
+      xpath: null
+      type: Text
+    college:
+      css: 'td.collegeAlpha a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_summary_1:
+    Program_title:
+      css: 'h2.pane-title > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_code:
+      css: 'div.left div'
+      xpath: null
+      type: Text
+    Program_description:
+#      css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+      css: 'div.mobileRow:nth-of-type(3) div.mobileCell > div'
+      xpath: null
+      type: Text
+    #At a Glance
+    College:
+      css: a.tt
+      xpath: null
+      type: Text
+    Additional_Program_Fee:
+      css: 'div.mobileCell > ul li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Second_Language_Requirement:
+      css: 'div.mobileCell > ul li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    First_Required_Math_Course:
+      css: 'div.mobileCell li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Math_Intensity:
+      css: 'span.tt_noTitle:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_map:
+      css: 'a span.underline'
+      xpath: '//*[@id="userMenuHeader"]/span/span/a'
+      type: Link
+    Major_map_oncampus:
+      css: 'div.mm_subplan a:nth-of-type(1)'
+      xpath: null
+      type: Link
+    Major_map_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Major_map_concurrent:
+      css: 'div.majormap-box div:nth-of-type(1) a.underline'
+      xpath: null
+      type: Link
+    Accelerated_program_options:
+      css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Admission_requirements:
+      css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+      xpath: null
+      type: Text
+    Change_of_major_requirements:
+      css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+      xpath: null
+      type: Text
+    Attend_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Transfer_options:
+      css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+      xpath: null
+      type: Text
+    Global_opportunities:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell div'
+      xpath: null
+      type: Text
+    Career_opportunities:
+      css: 'div.mobileRow:nth-of-type(19) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Contact_Information:
+      css: 'div.mobileRow:nth-of-type(21) p'
+      xpath: null
+      type: Text
+
+  Post_curriculum_requirements_hours:         # Requirement_group
+    Program_year:
+      css: 'div#major_middle_section > div:nth-of-type(1) span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_name:
+      css: 'div#major_middle_section > div:nth-of-type(1) span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Location_type:
+      css: 'a.ttCampus'
+      xpath: null
+      multiple: true
+      type: Text
+    Total_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Upper_Division_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Cumulative_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(4)'
+      xpath: null
+      type: Text
+    Total_hrs_at_ASU:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(5)'
+      xpath: null
+      type: Text
+    Hrs_Resident_Credit_for_Academic_Recognition:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(6)'
+      xpath: null
+      type: Text
+    Total_Community_College_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(7)'
+      xpath: null
+      type: Text
+    Total_College_Residency_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(8)'
+      xpath: null
+      type: Text
+#  Post_curriculum_university_requirements:
+    Subject_General_Studies_Core_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(2) li:nth-of-type(n+3)'
+      xpath: null
+      multiple: true
+      type: Text
+    Subject_General_Studies_Awareness_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(3) li:nth-of-type(n+2)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_term_heading:          # Term
+    Term:
+      css: 'div.mm_req_cat:nth-of-type(n+2)'
+      xpath: null
+      multiple: true
+      type: Text
+
+
+  Post_curriculum:
+    subject_raw_text:
+      css: 'div.mm_reqUnderCat div'
+      xpath: null
+      multiple: true
+      type: Text
+    subject:
+      css: 'div.mm_reqUnderCat div a'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_link:
+      subject_link:
+      css: 'div.mm_reqUnderCat div a'
+      xpath: null
+      multiple: true
+      type: Link
+    subject_hours:
+      css: 'div.mm_reqUnderCat span'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_minium_grade:
+      css: 'td.underline:nth-of-type(4)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_curriculum_summary_1:
+    course_code:
+      css: 'td.subjectNumberColumnValue span'
+      xpath: null
+      type: Text
+      multiple: true
+    Course_title:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Text
+    Course_title_link:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Link
+#    Course_description:
+#      css: td.courseTitleLongColumnValue
+#      xpath: null
+#      multiple: true
+#      type: Text
+    course_description:
+      css: 'p span'
+      xpath: null
+      multiple: true
+      type: Text
+    course_college_dept:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_prerequisites:
+      css: div.enrollReq
+      xpath: null
+      multiple: true
+      type: Text
+    Course_credits:
+      css: td.hoursColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Course_gs:
+      css: 'td.tooltipRqDesDescrColumnValue div'
+      xpath: null
+      multiple: true
+      type: Text
+    Allow_multiple_enrollments:
+      css: 'span span span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: 'span span span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Primary_course_component:
+      css: 'label:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Grading_method:
+      css: 'label:nth-of-type(4)'
+      xpath: null
+      type: Text
+
+
+  Search_path:
+    Xpath: //*[@id="details-side-panel"]/label[5]
+
+  Post_curriculum_summary_2:
+    Title:
+      css: 'div.col-md-6 h2'
+      xpath: null
+      type: Text
+    Course_description:
+      css: 'div.col-md-6:nth-of-type(1)'
+      xpath: null
+      type: Text
+    College_title:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    College_title_link:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Link
+    Course_offering_season:
+      css: 'div.col-md-6 div h3'
+      xpath: null
+      type: Text
+    Number_of_Units:
+      css: span.crs-units
+      xpath: null
+      type: Text
+    Allow_Multiple_Enrollments:
+      css: 'div.col-md-6 div span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    General_Studies:
+      css: span.crs-genstuds
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: span.crs-repeatable
+      xpath: null
+      type: Text
+
+# <--------- Certificate --------->
+https://degrees.apps.asu.edu/minors/major-list/keyword/Certificate:
+#https://webapp4.asu.edu/programs/t5/programs/Keyword/%20Certificate%20/undergrad/true:
+  CREATED_BY: Raghav
+  TYPE: Education
+  DEGREE: minor
+  DEGREE_TYPE: minor
+  PROGRAM: minor
+  UNIVERSITY: 'Arizona State University'
+  DOMAIN: 'webapp4.asu.edu'
+  BASEURL: https://webapp4.asu.edu
+  PROJECT: https://degrees.apps.asu.edu/minors/major-list/keyword/Certificate
+  URL: https://webapp4.asu.edu
+  START_SCRAPE: False
+  RESUME_SCRPAPE: False
+  INST_PARAM_GROUP_LEVEL: 'DEGREE_LEVEL'
+  INST_PARAM_VALUE_LEVEL: '%certificate%'
+  PROGRAM_LEVEL: 'PROGRAM_LEVEL'
+  PROGRAM_TYPE: '%Undergraduate Minors and Certificates%'
+  Requirement_type:
+    required: False
+  Major_Map_BGM:
+    required: False
+  Click_next_button:
+    required: True
+    Xpath: //*[@id="CourseCatalogList_next"]
+  Pagination:
+    required: True
+  Pagination_urls:
+    Urls:
+      css: 'a.paginate_button '
+      xpath: null
+      multiple: true
+      type: Attribute
+      attribute: data-dt-idx
+
+  Post_course:
+    title:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Text
+    title_urls:
+      css: a.majorUrl
+      xpath: null
+      multiple: true
+      type: Link
+    degree:
+      css: td.degree
+      xpath: null
+      multiple: true
+      type: Text
+    map:
+      css: 'td.MajorMap a'
+      xpath: null
+      type: Link
+    location:
+      css: a.ttCampus
+      xpath: null
+      multiple: true
+      type: Text
+    concurrent:
+      css: td.online
+      xpath: null
+      type: Text
+    college:
+      css: 'td.collegeAlpha a'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_summary_1:
+    Program_title:
+      css: 'h2.pane-title > span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_code:
+      css: 'div.left div'
+      xpath: null
+      type: Text
+    Program_description:
+#      css: 'div.mobileRow:nth-of-type(3) div.mobileCell div div:nth-of-type(1)'
+      css: 'div.mobileRow:nth-of-type(3) div.mobileCell > div'
+      xpath: null
+      type: Text
+    #At a Glance
+    College:
+      css: a.tt
+      xpath: null
+      type: Text
+    Additional_Program_Fee:
+      css: 'div.mobileCell > ul li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Second_Language_Requirement:
+      css: 'div.mobileCell > ul li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    First_Required_Math_Course:
+      css: 'div.mobileCell li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Math_Intensity:
+      css: 'span.tt_noTitle:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_map:
+      css: 'a span.underline'
+      xpath: '//*[@id="userMenuHeader"]/span/span/a'
+      type: Link
+    Major_map_oncampus:
+      css: 'div.mm_subplan a:nth-of-type(1)'
+      xpath: null
+      type: Link
+    Major_map_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Major_map_concurrent:
+      css: 'div.majormap-box div:nth-of-type(1) a.underline'
+      xpath: null
+      type: Link
+    Accelerated_program_options:
+      css: 'div.mobileRow:nth-of-type(9) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Admission_requirements:
+      css: 'div.mobileRow:nth-of-type(11) div.mobileCell div'
+      xpath: null
+      type: Text
+    Change_of_major_requirements:
+      css: 'div.mobileRow:nth-of-type(13) div.mobileCell div'
+      xpath: null
+      type: Text
+    Attend_online:
+      css: 'div.mm_subplan a:nth-of-type(2)'
+      xpath: null
+      type: Link
+    Transfer_options:
+      css: 'div.mobileRow:nth-of-type(15) div.mobileCell'
+      xpath: null
+      type: Text
+    Global_opportunities:
+      css: 'div.mobileRow:nth-of-type(17) div.mobileCell div'
+      xpath: null
+      type: Text
+    Career_opportunities:
+      css: 'div.mobileRow:nth-of-type(19) div.mobileCell > div'
+      xpath: null
+      type: Text
+    Contact_Information:
+      css: 'div.mobileRow:nth-of-type(21) p'
+      xpath: null
+      type: Text
+
+  Post_curriculum_requirements_hours:         # Requirement_group
+    Program_year:
+      css: 'div#major_middle_section > div:nth-of-type(1) span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Program_name:
+      css: 'div#major_middle_section > div:nth-of-type(1) span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Location_type:
+      css: 'a.ttCampus'
+      xpath: null
+      multiple: true
+      type: Text
+    Total_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Upper_Division_Hours:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Major_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Cumulative_GPA:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(4)'
+      xpath: null
+      type: Text
+    Total_hrs_at_ASU:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(5)'
+      xpath: null
+      type: Text
+    Hrs_Resident_Credit_for_Academic_Recognition:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(6)'
+      xpath: null
+      type: Text
+    Total_Community_College_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(7)'
+      xpath: null
+      type: Text
+    Total_College_Residency_Hrs:
+      css: 'div.generalNotesDiv ul.noBullets li:nth-of-type(8)'
+      xpath: null
+      type: Text
+#  Post_curriculum_university_requirements:
+    Subject_General_Studies_Core_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(2) li:nth-of-type(n+3)'
+      xpath: null
+      multiple: true
+      type: Text
+    Subject_General_Studies_Awareness_Requirements:
+      css: 'div.generalNotesDiv div:nth-of-type(3) li:nth-of-type(n+2)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_term_heading:          # Term
+    Term:
+      css: 'div.mm_req_cat:nth-of-type(n+2)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_curriculum:
+    subject_raw_text:
+      css: 'div.mm_reqUnderCat div'
+      xpath: null
+      multiple: true
+      type: Text
+    subject:
+      css: 'div.mm_reqUnderCat div a'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_link:
+      subject_link:
+      css: 'div.mm_reqUnderCat div a'
+      xpath: null
+      multiple: true
+      type: Link
+    subject_hours:
+      css: 'div.mm_reqUnderCat span'
+      xpath: null
+      multiple: true
+      type: Text
+    subject_minium_grade:
+      css: 'td.underline:nth-of-type(4)'
+      xpath: null
+      multiple: true
+      type: Text
+
+  Post_curriculum_summary_1:
+    course_code:
+      css: 'td.subjectNumberColumnValue span'
+      xpath: null
+      type: Text
+      multiple: true
+    Course_title:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Text
+    Course_title_link:
+      css: a.course-details-link
+      xpath: null
+      multiple: true
+      type: Link
+#    Course_description:
+#      css: td.courseTitleLongColumnValue
+#      xpath: null
+#      multiple: true
+#      type: Text
+    course_description:
+      css: 'p span'
+      xpath: null
+      multiple: true
+      type: Text
+    course_college_dept:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    course_prerequisites:
+      css: div.enrollReq
+      xpath: null
+      multiple: true
+      type: Text
+    Course_credits:
+      css: td.hoursColumnValue
+      xpath: null
+      multiple: true
+      type: Text
+    Course_gs:
+      css: 'td.tooltipRqDesDescrColumnValue div'
+      xpath: null
+      multiple: true
+      type: Text
+    Allow_multiple_enrollments:
+      css: 'span span span:nth-of-type(1)'
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: 'span span span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    Primary_course_component:
+      css: 'label:nth-of-type(3)'
+      xpath: null
+      type: Text
+    Grading_method:
+      css: 'label:nth-of-type(4)'
+      xpath: null
+      type: Text
+
+
+  Search_path:
+    Xpath: //*[@id="details-side-panel"]/label[5]
+
+  Post_curriculum_summary_2:
+    Title:
+      css: 'div.col-md-6 h2'
+      xpath: null
+      type: Text
+    Course_description:
+      css: 'div.col-md-6:nth-of-type(1)'
+      xpath: null
+      type: Text
+    College_title:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Text
+    College_title_link:
+      css: 'span span a'
+      xpath: null
+      multiple: true
+      type: Link
+    Course_offering_season:
+      css: 'div.col-md-6 div h3'
+      xpath: null
+      type: Text
+    Number_of_Units:
+      css: span.crs-units
+      xpath: null
+      type: Text
+    Allow_Multiple_Enrollments:
+      css: 'div.col-md-6 div span:nth-of-type(2)'
+      xpath: null
+      type: Text
+    General_Studies:
+      css: span.crs-genstuds
+      xpath: null
+      type: Text
+    Repeatable_for_credit:
+      css: span.crs-repeatable
+      xpath: null
+      type: Text

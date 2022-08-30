@@ -1,0 +1,17 @@
+version: 1
+formatters:
+  simple:
+     format: '%(asctime)s - [%(levelname)s] [%(filename)s:%(lineno)s - %(funcName)s()] %(name)s: %(message)s'
+handlers:
+  all:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: DEBUG
+    when: 'midnight'         # 'midnight' / 'S' / 'H'
+    interval: 1
+    backupCount: 2           # For last 7 days of logs will be handle.
+    filename: "C:/Users/RAGHA/PycharmProjects/vidyayug_projects/GTS_scraper/logs/"
+    formatter: simple
+root:
+  level: DEBUG
+  handlers: [all]
+  propagate: false
