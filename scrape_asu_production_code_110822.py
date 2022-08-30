@@ -2541,9 +2541,9 @@ def show_course_next_page(url, expression, inst_id):
                                 time.sleep(5)
                                 soup = BeautifulSoup(driver.page_source, 'html.parser')
                                 logger.debug("collecting data for page-: %s" % count)
-                                print("collecting data for page-: s", count)
+                                # print("collecting data for page-: s", count)
                                 data = extract_data_using_selector_lib(soup, "Post_curriculum_summary_1", Website_URL)
-                                print("total courses collected on this page- %s :",len(data['course_code']))
+                                # print("total courses collected on this page- %s :",len(data['course_code']))
                                 logger.debug("total courses collected on this page- %s" % len(data['course_code']))
 
                                 try:
@@ -2601,10 +2601,10 @@ if __name__ == '__main__':
         "https://degrees.apps.asu.edu/masters-phd/major-list/accelerated-programs",
         # undergraduate
         "https://degrees.apps.asu.edu/bachelors/major-list/accelerated-programs",
-        # Minor
-        "https://degrees.apps.asu.edu/minors/major-list/keyword/Minor",
-        # Certificate
-        "https://degrees.apps.asu.edu/minors/major-list/keyword/Certificate"
+        # # Minor
+        # "https://degrees.apps.asu.edu/minors/major-list/keyword/Minor",
+        # # Certificate
+        # "https://degrees.apps.asu.edu/minors/major-list/keyword/Certificate"
     ]
 
     for Website_URL in ASU_Website_URL:
